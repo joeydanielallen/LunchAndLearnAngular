@@ -1,0 +1,11 @@
+{
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 3000,
+    "typescript.referencesCodeLens.enabled": true,
+    "typescript.implementationsCodeLens.enabled": true,
+    "files.trimTrailingWhitespace": true,
+    "files.exclude": {
+        "**/.git": true,
+        "**/coverage": true
+    }
+}

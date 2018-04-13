@@ -1,0 +1,22 @@
+
+<mat-toolbar color="primary">
+
+  <button aria-label="Dashboard" mat-button routerLink="" aria-disabled="false" href="javascript:void(0)">
+    <i class="material-icons">hot_tub</i>
+    <span> Home</span>
+  </button>
+
+  <mat-menu #rootMenu="matMenu">
+    <button mat-menu-item routerLink="users" aria-disabled="false" href="javascript:void(0)">Users</button>
+    <button mat-menu-item>Roles</button>
+  </mat-menu>
+
+  <button mat-button [matMenuTriggerFor]="rootMenu">
+    Admin
+  </button>
+
+  <span class="example-fill-remaining-space"></span>
+
+  <span>Right Aligned Text</span>
+
+</mat-toolbar>

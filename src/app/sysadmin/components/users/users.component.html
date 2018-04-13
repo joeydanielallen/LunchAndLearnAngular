@@ -1,0 +1,22 @@
+
+<div *ngIf="isLoading" style="text-align:center">
+  <img src="../../../../assets//spin.gif" alt="Loading ..." width="100">
+  <h3>Loading users ...</h3>
+</div>
+<div *ngIf="!isLoading">
+
+  <table class="table table-sm table-bordered table-hover">
+    <thead class="thead-inverse">
+      <tr>
+        <th>User Name</th>
+        <th>Is Active</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of model; trackBy: trackByUserId">
+      <td> <a [routerLink]="['/users' , user.userId]" routerLinkActive="active">{{ user.userName }}</a></td>
+      <td>{{ !user.isinactive | boolToYesNo }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
